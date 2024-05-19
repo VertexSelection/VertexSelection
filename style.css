@@ -102,6 +102,24 @@ h1 {
     animation: opacityAnim 2s forwards 0.2s;
  }
 
+ .vertices-paws{
+    position: fixed;
+    width: 15vw;
+    bottom: -2.1vh;
+    left: 80vw;
+    z-index: 2;
+    animation: verticesPaws 1s forwards 6s;
+ }
+
+ .vertices-confused{
+    position: fixed;
+    width: 18vw;
+    bottom: -18vw;
+    left: 79vw;
+    animation: verticesConfused 2s forwards 6.5s;
+    animation-timing-function: ease;
+ }
+
  /*--------------------------------------------------ANIMATIONS--------------------------------------------------*/
 
  @keyframes animatedHeader{
@@ -129,4 +147,21 @@ h1 {
     to{
         opacity: 100;
     }
+ }
+
+ @keyframes verticesPaws {
+    from{
+        bottom: -2.1vh;
+    }
+    to{
+        bottom: 0vh;
+    }
+ }
+
+ @keyframes verticesConfused {
+    0%      {bottom: -18vw;}
+    20%     {bottom: -3vw;}
+    40%     {bottom: -5vw;}
+    100%     {bottom: -3.5vw;}
+
  }
