@@ -1,0 +1,119 @@
+/*-------------------------------------------------FONTS--------------------------------------------------*/
+
+@font-face{
+    font-family: Poppins-Medium;
+    src: url(fonts/poppins/Poppins-Medium.ttf);
+}
+
+@font-face{
+    font-family: Poppins-Bold;
+    src: url(fonts/poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+/*----------------------------------------------------ACTUAL--------------------------------------------------*/
+
+body {
+    background-color: #0D0D0D;
+  }
+
+h1 {
+    margin: -10px;
+    padding: 0px;
+}
+
+ .welcome-header {
+    font-family: "Poppins-Bold";
+    font-size: 5vw;
+    color: white;
+    animation: fadeUp 1s;
+ }
+
+ .welcome-header2 {
+    font-family: "Poppins-Bold";
+    font-size: 5vw;
+    opacity: 0;
+    animation: fadeUp 1s forwards 1s;
+
+
+ }
+
+ .welcome-header3 {
+    font-family: "Poppins-Bold";
+    font-size: 5vw;
+    padding-left: 3vw;
+    background-image: linear-gradient(to right, #ffb183, #b44c10, #ffb183, #b44c10, #ffb183, #b44c10, #ffb183, #b44c10, #ffb183);
+    background-size: 300%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+
+    animation: animatedHeader 5s forwards 1.3s, fadeUp 1s forwards 1.3s;
+
+ }
+
+ .small-welcome-header {
+    font-family: "Poppins-Medium";
+    font-size: 2.5vw;
+    margin: -10px;
+    color: white;
+ }
+
+ .about-website {
+    font-family: "RobotoCondensed";
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: white;
+ }
+
+ .header-div-centered{
+    margin: auto;
+    padding: 230px;
+    text-align: center;
+    color: white;
+ }
+
+ .linear-gradient{
+    margin: -7px;
+    height: 25vw;
+    background-image: linear-gradient(rgba(145, 53, 0, 0.747), rgba(145, 53, 0, 0));
+ }
+
+ /*--------------------------------------------------ANIMATIONS--------------------------------------------------*/
+
+ @keyframes animatedHeader{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 100%;
+    }
+ }
+
+ @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2vw) scale(0.9);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translateY(0vw) scale(1);
+    }
+ }
