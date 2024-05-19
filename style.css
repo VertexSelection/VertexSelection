@@ -65,7 +65,7 @@ h1 {
     background-clip: text;
     opacity: 0;
 
-    animation: animatedHeader 5s forwards 1.3s, fadeUp 1s forwards 1.3s;
+    animation: animatedHeader 5s forwards 1.3s, fadeUp 1s forwards 1.3s, shadowBlurOpacity 2s forwards 5s;
 
  }
 
@@ -164,4 +164,13 @@ h1 {
     40%     {bottom: -5vw;}
     100%     {bottom: -3.5vw;}
 
+ }
+
+ @keyframes shadowBlurOpacity {
+    from {
+        -webkit-filter: drop-shadow(0px 0px 20px #ff7b00bd);
+    }
+    to {
+        -webkit-filter: drop-shadow(0px 0px 20px #ff7b0000);
+    }
  }
