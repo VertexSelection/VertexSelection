@@ -73,6 +73,8 @@ h1 {
     font-size: 2.5vw;
     margin: -10px;
     color: white;
+    opacity: 0;
+    animation: fadeUp 1s forwards 1.5s;
  }
 
  .about-website {
@@ -80,6 +82,8 @@ h1 {
     font-weight: 500;
     font-size: 1.5vw;
     color: white;
+    opacity: 0;
+    animation: fadeUp 1s forwards 1.8s;
  }
 
  .header-div-centered{
@@ -90,9 +94,11 @@ h1 {
  }
 
  .linear-gradient{
+    opacity: 0;
     margin: -7px;
     height: 25vw;
     background-image: linear-gradient(rgba(145, 53, 0, 0.747), rgba(145, 53, 0, 0));
+    animation: opacityAnim 2s forwards 0.2s;
  }
 
  /*--------------------------------------------------ANIMATIONS--------------------------------------------------*/
@@ -115,5 +121,11 @@ h1 {
     100% {
         opacity: 100;
         transform: translateY(0vw) scale(1);
+    }
+ }
+
+ @keyframes opacityAnim {
+    to{
+        opacity: 100;
     }
  }
