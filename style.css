@@ -60,8 +60,9 @@ h1 {
     background-size: 300%;
     background-position: -100%;
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-filter: drop-shadow(0px 0px 20px #ff7b00bd);
     background-clip: text;
-    color: transparent;
     opacity: 0;
 
     animation: animatedHeader 5s forwards 1.3s, fadeUp 1s forwards 1.3s;
@@ -74,7 +75,7 @@ h1 {
     margin: -10px;
     color: white;
     opacity: 0;
-    animation: fadeUp 1s forwards 1.5s;
+    animation: fadeUp 1s forwards 3s;
  }
 
  .about-website {
@@ -83,7 +84,7 @@ h1 {
     font-size: 1.5vw;
     color: white;
     opacity: 0;
-    animation: fadeUp 1s forwards 1.8s;
+    animation: fadeUp 1s forwards 3.3s;
  }
 
  .header-div-centered{
