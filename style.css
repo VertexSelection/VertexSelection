@@ -1,3 +1,7 @@
+/*-------------------------------------------------LIBRARIES--------------------------------------------------*/
+
+@import "compass/css3";
+
 /*-------------------------------------------------FONTS--------------------------------------------------*/
 
 @font-face{
@@ -108,7 +112,8 @@ h1 {
     bottom: -2.1vh;
     left: 80vw;
     z-index: 2;
-    animation: verticesPaws 1s forwards 6s;
+    animation: verticesPaws 0.5s forwards 6s, verticesPaws 0.5s forwards reverse 12.25s;
+    animation-timing-function: ease-in-out;
  }
 
  .vertices-confused{
@@ -116,8 +121,28 @@ h1 {
     width: 18vw;
     bottom: -18vw;
     left: 79vw;
-    animation: verticesConfused 2s forwards 6.5s;
+    animation: verticesConfused 2s forwards 6.5s, verticesConfused 2s forwards reverse 10.5s;
     animation-timing-function: ease;
+ }
+
+ .cone-bg{
+    position: absolute;
+    width: 4vw;
+    z-index: 2;
+    -webkit-filter: blur(0.5px) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.952));
+    opacity: 0;
+    animation: opacityAnim 6s forwards 1s, welcomeBackgroundElements2 5s infinite 1s;
+    animation-timing-function: ease-in-out;
+ }
+
+ .vertices-bg{
+    position: absolute;
+    width: 5vw;
+    z-index: 2;
+    -webkit-filter: blur(0.5px) drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.952));
+    opacity: 0;
+    animation: opacityAnim 6s forwards, welcomeBackgroundElements2 5s infinite;
+    animation-timing-function: ease-in-out;
  }
 
  /*--------------------------------------------------ANIMATIONS--------------------------------------------------*/
@@ -138,14 +163,14 @@ h1 {
     }
 
     100% {
-        opacity: 100;
+        opacity: 1;
         transform: translateY(0vw) scale(1);
     }
  }
 
  @keyframes opacityAnim {
     to{
-        opacity: 100;
+        opacity: 1;
     }
  }
 
@@ -166,6 +191,15 @@ h1 {
 
  }
 
+ @keyframes verticesConfused2 {
+    0%      {bottom: -18vw;}
+    40%     {bottom: -3vw;}
+    60%     {bottom: -5vw;}
+    100%     {bottom: -3.5vw;}
+
+ }
+
+
  @keyframes shadowBlurOpacity {
     from {
         -webkit-filter: drop-shadow(0px 0px 20px #ff7b00bd);
@@ -174,3 +208,25 @@ h1 {
         -webkit-filter: drop-shadow(0px 0px 20px #ff7b0000);
     }
  }
+
+ @keyframes welcomeBackgroundElements{
+    from {
+        transform: translateY(2vw)
+    }
+    to {
+        transform: translateY(0vw)
+    }
+ }
+
+ @keyframes welcomeBackgroundElements2{
+    0% {
+        transform: translateY(2vw)
+    }
+    50% {
+        transform: translateY(0vw)
+    }
+    100% {
+        transform: translateY(2vw)
+    }
+ }
+
